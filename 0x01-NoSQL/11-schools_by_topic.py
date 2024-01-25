@@ -9,7 +9,7 @@ def schools_by_topic(mongo_collection, topic):
         mongo_collection: pymongo collection object
         topic: (string) will be topic searched
     """
-    filter_criteria = {"topic": {"$in": [topic]}}
+    filter_criteria = {"topic": topic}
     result = mongo_collection.find(filter_criteria)
     schools_list = list(result)
     return schools_list
