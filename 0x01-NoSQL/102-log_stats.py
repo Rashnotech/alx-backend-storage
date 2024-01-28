@@ -24,8 +24,7 @@ if __name__ == '__main__':
         '$group': {
             '_id': '$ip',
             'count': {'$sum': 1}
-            }
-        }, {'$sort': {'count': -1}}, {'$limit': 10}])
-
-    for ip in ips:
-        print('\t {}: {}'.format(ip['_id'], ip['count']))
+            }},
+        {'$sort': {'count': -1}}, {'$limit': 10}])
+    for log in ips:
+        print('\t{}: {}'.format(log['_id'], log['count']))
