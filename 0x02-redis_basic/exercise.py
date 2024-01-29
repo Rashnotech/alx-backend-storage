@@ -30,7 +30,6 @@ def call_history(method: Callable) -> Callable:
     return wrapper
 
 
-
 class Cache:
     """
     A cache class that instantiate redis client
