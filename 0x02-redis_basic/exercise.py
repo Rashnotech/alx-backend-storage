@@ -43,7 +43,7 @@ def replay(method: Callable) -> Any:
     for lin, lout in zip(input_list, output_list):
         lin_decode = lin.decode('utf-8')
         lout_decode = lout.decode('utf-8')
-        print('{}(*{}) -> {}'.format(fn, lin_decode, loutdecode))
+        print('{}(*{}) -> {}'.format(fn, lin_decode, lout_decode))
 
 
 class Cache:
