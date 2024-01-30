@@ -30,17 +30,3 @@ def cache_result(func) -> Callable:
 @cache_result
 def get_page(url: str) -> str:
     return requests.get(url)
-
-"""
-if __name__ == '__main__':
-    slow_url = 'http://slowwly.robertomurray.co.uk'
-    
-    for _ in range(3):
-        content = get_page(slow_url)
-        print(f'Content for {slow_url}\n{content}')
-        time.sleep(5)
-
-        access_count_key = f'count:{slow_url}'
-        total_access_count = cache.get(access_count_key)
-        print(f"Total access count for {slow_url}: {total_access_count.decode('utf-8')}")
-"""
