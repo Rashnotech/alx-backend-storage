@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""a module that """
+"""a module that keep track the number of count"""
 import requests
 from functools import wraps
 import time
@@ -8,6 +8,7 @@ from typing import Callable, Any
 
 
 cache = redis.Redis()
+
 
 def cache_result(func) -> Callable:
     """cach result"""
@@ -29,4 +30,5 @@ def cache_result(func) -> Callable:
 
 @cache_result
 def get_page(url: str) -> str:
+    """ a module that get page in 10 seconds"""
     return requests.get(url)
