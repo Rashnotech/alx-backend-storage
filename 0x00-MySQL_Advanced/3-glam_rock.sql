@@ -1,3 +1,5 @@
+-- a sql script that list all band with glam
+-- rank by their longevity
 SELECT band_name,
   CASE
     WHEN split IS NULL THEN 2022 - formed
